@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generation 1 Pokedex</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Pokedex <span class="subtitle">Gen 1</span></h1>
+            <button id="view-toggle" class="nav-btn">All Pokemons</button>
+            <div class="search-container hidden" id="search-container">
+                <input type="text" id="search-input" placeholder="Search Pokemon..." aria-label="Search Pokemon">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="pokedex-carousel" class="carousel-container">
+            <button class="nav-arrow left" id="prev-btn" aria-label="Previous Pokemon">&lt;</button>
+            <div class="carousel-track" id="carousel-track">
+            </div>
+            <button class="nav-arrow right" id="next-btn" aria-label="Next Pokemon">&gt;</button>
+        </div>
+
+        <div id="pokedex-grid" class="grid-container hidden">
+        </div>
+    </main>
+
+    <div id="pokemon-detail-modal" class="modal hidden" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close details">&times;</button>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
